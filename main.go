@@ -25,7 +25,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/index", hello).Methods("GET")
+	r.HandleFunc("/api/v1/backoffice/coba", hello).Methods("GET")
 
 	http.ListenAndServe(PORT, r)
 }
