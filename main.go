@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -27,5 +28,6 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/api/v1/backoffice/coba", hello).Methods("GET")
 
+	fmt.Println("Running on port", PORT)
 	http.ListenAndServe(PORT, r)
 }
